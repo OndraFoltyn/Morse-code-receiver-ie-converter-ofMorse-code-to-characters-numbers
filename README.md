@@ -33,6 +33,7 @@ Write your text here.
 ## VHDL modules description and simulations
 
 ### Clock enable 
+![clk](https://github.com/jdrapal/digital-electronics-1/blob/master/labs/project/images/tb_clock_enable.png)
 
 <a name="top"></a>
 
