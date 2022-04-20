@@ -33,6 +33,8 @@ Write your text here.
 ## VHDL modules description and simulations
 
 ### Clock enable 
+[Source code for Clock enable](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/design/clock_enable.vhdl)
+[Source code for Clock enable simulation ](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/tb/clock_en_tb.vhdl)
 ![clk](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/images/tb_clock_enable.png)
 
 <a name="top"></a>
