@@ -32,7 +32,7 @@ Write your text here.
 
 ## VHDL modules description and simulations
 
-Write your text here.
+# Clock enable 
 
 <a name="top"></a>
 
