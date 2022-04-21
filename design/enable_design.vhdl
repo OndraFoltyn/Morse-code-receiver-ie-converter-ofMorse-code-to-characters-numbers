@@ -7,8 +7,8 @@ use ieee.numeric_std.all;   -- Package for arithmetic operations
 ------------------------------------------------------------
 entity counter is
     generic(
-        g_MAX : natural := 10; -- Number of clk pulses to
-        t_MAX : natural := 10  -- generate one enable signal
+        g_MAX : natural := 10 -- Number of clk pulses to
+          -- generate one enable signal
                              -- period
     );  -- Note that there IS a semicolon between generic 
         -- and port sections
@@ -17,6 +17,7 @@ entity counter is
         reset : in  std_logic; -- Synchronous reset
         ce_o  : out std_logic;-- Clock enable pulse signal
         inp	  : in	std_logic;
+        inp_mez: in	std_logic;
         seg_o : out std_logic_vector(2 - 1 downto 0)
        
     );
@@ -29,7 +30,6 @@ architecture Behavioral of counter is
 
     -- Local counter
     signal s_cnt_local  : natural;
-    signal s_enable_cnt : natural;
     signal s_counter :natural;
     
 
@@ -64,46 +64,50 @@ begin
    		if rising_edge(ce_o) then
         	
             if (reset = '1') then
-            	s_enable_cnt <= 0;
-                s_counter <= 0;
-                
-            elsif (s_enable_cnt >= (t_MAX - 1)) then
-            	s_enable_cnt <= 0;
+            	
                 s_counter <= 0;
             
-            elsif (inp= '0') then
-            	s_enable_cnt <= s_enable_cnt + 1;
+            elsif (inp_mez = '1') then
                 s_counter <= 0;
                 
             elsif (inp = '1') then
                     s_counter<= s_counter + 1;
-                    s_enable_cnt <= 0;
-            else 
-            		s_counter <=0; 
-           
+                    
+            
+                
             end if;
         end if;
 	 end process p_cnt;
 
 	 p_out_counter : process(s_counter)
      begin
-        if falling_edge(inp) then
-            elsif (s_counter > 0 and s_counter<3) then
-                seg_o <= "01"; -- tečka
-                
-           elsif (s_counter >3)  then
+        
+           if (s_counter >= 3) then
                 seg_o <= "10"; -- čárka
                 
-           elsif (s_counter =0) then
+                
+           elsif (s_counter = 0)  then
            		seg_o <= "00"; -- mezera mezi znakama
                 
-            elsif (s_enable_cnt >= 9) then
-            	seg_o <= "11";-- mezera písmenama
+           else
+                seg_o <= "01"; -- tečka
+                
+           
                 
         end if;
-      
-    end process p_out_counter;
+     end process p_out_counter;
+     
+     p_sent : process(inp_mez)
+     begin
+     
+           if (inp_mez = '1' ) then
+           		 -- odeslaní do shift registru 
+   
+           end if;
+    
+    end process p_sent;
      
     
      
 end architecture Behavioral;
+
