@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Apr 22 18:10:04 2022
+# Process ID: 13180
+# Current directory: C:/Digital electronics 1/kubuv_repozitar/digital-electronics-1/labs/project/project_morse
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2316 C:\Digital electronics 1\kubuv_repozitar\digital-electronics-1\labs\project\project_morse\project_morse.xpr
+# Log file: C:/Digital electronics 1/kubuv_repozitar/digital-electronics-1/labs/project/project_morse/vivado.log
+# Journal file: C:/Digital electronics 1/kubuv_repozitar/digital-electronics-1/labs/project/project_morse\vivado.jou
+# Running On: LAPTOP-2256P69N, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17054 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Digital electronics 1/kubuv_repozitar/digital-electronics-1/labs/project/project_morse/project_morse.xpr}
+upgrade_project -migrate_output_products
+update_compile_order -fileset sources_1
