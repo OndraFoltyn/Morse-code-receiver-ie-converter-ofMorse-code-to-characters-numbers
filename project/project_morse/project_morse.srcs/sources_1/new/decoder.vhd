@@ -104,11 +104,11 @@ begin
      begin
         
            if (s_counter >= 3) then
-                seg_o <= '1'; -- èárka
+                seg_o <= '1'; -- Ã¨Ã¡rka
                 
                 
            elsif(s_counter < 3 and s_counter > 0) then
-                seg_o <= '0'; -- teèka
+                seg_o <= '0'; -- teÃ¨ka
                
         end if;
      end process p_out_counter;
@@ -131,7 +131,7 @@ begin
         end if;
     end process p_shift;
     
-    --vstupní led
+    --vstupnÃ­ led
     p_led : process (s_counter)
     begin
     	
@@ -196,62 +196,270 @@ begin
     begin
     	
     	if rising_edge(inp_tran) then
-           
-           	 if (s_cnt_char = 1 and shift_reg(4) = '0' ) then --E
-                      number(0) <='1';
-                      number(1) <='0';
-                      number(2) <='0';
-                      number(3) <='1';
-                      number(4) <='1';
-                      number(5) <='1';
-                      number(6) <='1';
                 
-             elsif (s_cnt_char = 2 and shift_reg(4) = '0' and shift_reg(3) = '1' ) then --A
-                      number(0) <='1';
-                      number(1) <='1';
-                      number(2) <='1';
-                      number(3) <='0';
-                      number(4) <='1';
-                      number(5) <='1';
-                      number(6) <='1';
-                
-             elsif (s_cnt_char = 2 and shift_reg(4) = '0' and shift_reg(3) ='0' ) then --I
-                      number(0) <='1';
-                      number(1) <='1';
-                      number(2) <='1';
-                      number(3) <='1';
-                      number(4) <='1';
-                      number(5) <='1';
-                      number(6) <='1';
-             
-             
-           	 elsif (s_cnt_char = 3 and shift_reg(4) = '0' and shift_reg(3) ='0' and shift_reg(2) = '0') then --S
-                      number(0) <='1';
-                      number(1) <='0';
-                      number(2) <='1';
-                      number(3) <='1';
-                      number(4) <='0';
-                      number(5) <='1';
-                      number(6) <='1';
-                    
-             elsif (s_cnt_char = 3 and shift_reg(4) = '1' and shift_reg(3) ='1' and shift_reg(2) = '1') then --O
-                      number(0) <='1';
-                      number(1) <='1';
-                      number(2) <='1';
-                      number(3) <='1';
-                      number(4) <='1';
-                      number(5) <='1';
-                      number(6) <='0';
-             else
-                      number(0) <='0';
-                      number(1) <='0';
-                      number(2) <='0';
-                      number(3) <='0';
-                      number(4) <='0';
-                      number(5) <='0';
-                      number(6) <='0';
-                
-           		--chybí dodìlat ostatní znaky abecedy plus èísla	
+             --ÄÃ­sla
+		if (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1' and shift_reg(0)='1') then --0
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1' and shift_reg(0)='1') then --1
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='1';
+			number(5) <='1';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='1' and shift_reg(1)='1' and shift_reg(0)='1') then --2
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='1';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='1' and shift_reg(0)='1') then --3
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='1';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='0' and shift_reg(0)='1') then --4
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='1';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='0' and shift_reg(0)='0') then --5
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='1';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='0' and shift_reg(0)='0') then --6
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='0' and shift_reg(1)='0' and shift_reg(0)='0') then --7
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='1';
+			number(5) <='1';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='0' and shift_reg(0)='0') then --8
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1' and shift_reg(0)='0') then --9
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='1';
+			number(5) <='0';
+			number(6) <='0';
+
+		--pismena
+
+		elsif (s_cnt_char = 2 and shift_reg(4)='0' and shift_reg(3)='1') then --A
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='1' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='0') then --b
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='1' and shift_reg(3)='0' and shift_reg(2)='1' and shift_reg(1)='0') then --C
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='1' and shift_reg(3)='0' and shift_reg(2)='0') then --d
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 1 and shift_reg(4)='0') then --E
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='1'and shift_reg(1)='0') then --F
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='0') then --G
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0' and shift_reg(1)='0') then --H
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 2 and shift_reg(4)='0' and shift_reg(3)='0') then --I
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1') then --J
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1') then --L
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 2 and shift_reg(4)='1' and shift_reg(3)='0') then --n
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='1') then --o
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='0') then --P
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='1';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='0') then --r
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='1';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0') then --S
+			number(0) <='0';
+			number(1) <='1';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='1';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 3 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='1') then --U
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='0';
+			number(6) <='1';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='1' and shift_reg(3)='0' and shift_reg(2)='1' and shift_reg(1)='1') then --y
+			number(0) <='1';
+			number(1) <='0';
+			number(2) <='0';
+			number(3) <='0';
+			number(4) <='1';
+			number(5) <='0';
+			number(6) <='0';
+
+		elsif (s_cnt_char = 4 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='0' and shift_reg(1)='0') then --Z
+			number(0) <='0';
+			number(1) <='0';
+			number(2) <='1';
+			number(3) <='0';
+			number(4) <='0';
+			number(5) <='1';
+			number(6) <='0';	
        	end if;
       end if;
     end process p_translate;
@@ -278,7 +486,7 @@ begin
         end if;
 	 end process p_dis_sel;
     
-    --zapisování na displej
+    --zapisovÃ¡nÃ­ na displej
     p_display : process(s_dis)
     begin
     
