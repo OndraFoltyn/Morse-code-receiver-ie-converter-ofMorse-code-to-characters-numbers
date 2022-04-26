@@ -460,6 +460,17 @@ begin
 			number(4) <='0';
 			number(5) <='1';
 			number(6) <='0';	
+			
+			
+		else 
+			number(0) <='1';
+			number(1) <='1';
+			number(2) <='1';
+			number(3) <='1';
+			number(4) <='1';
+			number(5) <='1';
+			number(6) <='1';	
+			
        	end if;
       end if;
     end process p_translate;
