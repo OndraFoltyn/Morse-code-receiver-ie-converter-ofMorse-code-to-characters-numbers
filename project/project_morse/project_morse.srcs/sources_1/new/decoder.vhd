@@ -5,8 +5,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity decoder is
 	generic(
         g_MAX : natural := 10;
-        d_MAX : natural := 7;
         ch_MAX : natural := 6
+        
         );  
     
     Port ( inp_mez : in  STD_LOGIC;
@@ -14,11 +14,11 @@ entity decoder is
            reset   : in  std_logic;
            inp	   : in	std_logic;
            LED 	   : out STD_LOGIC_VECTOR(14 downto 0);
-           DIS_1	   : out STD_LOGIC_VECTOR(6 downto 0);
-           DIS_2	   : out STD_LOGIC_VECTOR(6 downto 0);
-           DIS_3	   : out STD_LOGIC_VECTOR(6 downto 0);
-           DIS_4	   : out STD_LOGIC_VECTOR(6 downto 0);
-           DIS_5	   : out STD_LOGIC_VECTOR(6 downto 0);
+           DIS	   : out STD_LOGIC_VECTOR(6 downto 0);
+--           DIS_2	   : out STD_LOGIC_VECTOR(6 downto 0);
+--           DIS_3	   : out STD_LOGIC_VECTOR(6 downto 0);
+--           DIS_4	   : out STD_LOGIC_VECTOR(6 downto 0);
+--           DIS_5	   : out STD_LOGIC_VECTOR(6 downto 0);
            inp_tran : in std_logic;
            AN         : out STD_LOGIC_VECTOR (7 downto 0)
            );
@@ -35,7 +35,6 @@ architecture Behavioral of decoder is
     signal seg_o 		: STD_LOGIC;
     signal number 		: STD_LOGIC_VECTOR(6 downto 0);
     signal s_led		: STD_LOGIC_VECTOR(2 downto 0);
-    signal s_dis		: natural;
     signal ce_o         : std_logic;
     
 begin
@@ -104,11 +103,11 @@ begin
      begin
         
            if (s_counter >= 3) then
-                seg_o <= '1'; -- èárka
+                seg_o <= '1'; -- carka
                 
                 
            elsif(s_counter < 3 and s_counter > 0) then
-                seg_o <= '0'; -- teèka
+                seg_o <= '0'; -- tecka
                
         end if;
      end process p_out_counter;
@@ -144,12 +143,17 @@ begin
             	s_led(0) <= '1';
                 s_led(1) <= '1';
                 s_led(2) <= '0';
+                
+             elsif (s_counter =0) then 
+            	s_led(0) <= '0';
+                s_led(1) <= '0';
+                s_led(2) <= '0';
             end if;
         
     end process p_led;
     
      -- shift led
-    p_shift_led : process (inp_mez, inp_tran)
+    p_shift_led : process (inp_mez)
     begin
         if rising_edge(inp_mez) then
             
@@ -173,8 +177,16 @@ begin
           shift_led(1) <= shift_led(4);
           shift_led(0) <= shift_led(3);
           
-        elsif (rising_edge(inp_tran) or reset = '1') then
+      end if;
+    end process p_shift_led;   
+   p_zero : process (inp_mez)
+   begin     
+        if (rising_edge(inp_tran) or reset = '1') then
         --shift_led(14 downto 0) <= b"000000000000000";
+                s_led(0) <= '0';
+                s_led(1) <= '0';
+                s_led(2) <= '0';
+                
           shift_led(14) <= '0';
           shift_led(13) <= '0';
           shift_led(12) <= '0';
@@ -195,7 +207,7 @@ begin
           shift_led(1) <= '0';
           shift_led(0) <= '0';
         end if;
-    end process p_shift_led;
+   end process p_zero;
     
     p_clear_led : process(reset, inp_tran, inp_mez)
     begin 
@@ -215,7 +227,7 @@ begin
     	
     	if rising_edge(inp_tran) then
                 
-             --čísla
+             --cisla
 		if (s_cnt_char = 5 and shift_reg(4)='1' and shift_reg(3)='1' and shift_reg(2)='1' and shift_reg(1)='1' and shift_reg(0)='1') then --0
 			number(0) <='0';
 			number(1) <='0';
@@ -436,12 +448,12 @@ begin
 
 		elsif (s_cnt_char = 3 and shift_reg(4)='0' and shift_reg(3)='1' and shift_reg(2)='0') then --r
 			number(0) <='1';
-			number(1) <='1';
-			number(2) <='1';
-			number(3) <='1';
-			number(4) <='0';
-			number(5) <='1';
-			number(6) <='0';
+--			number(1) <='1';
+--			number(2) <='1';
+--			number(3) <='1';
+--			number(4) <='0';
+--			number(5) <='1';
+--			number(6) <='0';
 
 		elsif (s_cnt_char = 3 and shift_reg(4)='0' and shift_reg(3)='0' and shift_reg(2)='0') then --S
 			number(0) <='0';
@@ -494,55 +506,35 @@ begin
     end process p_translate;
     
     --volba displeje
-    p_dis_sel : process(inp_tran)
-    begin
-   		if rising_edge(inp_tran) then
-        	
-            if (reset = '1') then
-            
-                s_dis <= 0;
-                
-            
-           	elsif (s_dis >= (d_MAX - 1)) then
-                 s_dis <= 0;  
-            
-           	else
-             	 s_dis <= s_dis + 1;
-                    
-              
-            	
-        	end if;
-        end if;
-	 end process p_dis_sel;
     
-    --zapisování na displej
-    p_display : process(s_dis)
-    begin
     
-    	if (s_dis = 1) then
-        	DIS_1 <= number;
-        	AN(0) <= '1';
+--    --zapisování na displej
+--    p_display : process(s_dis)
+--    begin
+    
+--    	if (s_dis = 1) then
+--        	DIS_1 <= number;
+--        	AN(0) <= '1';
         
-        elsif (s_dis = 2) then
-        	DIS_2 <= number;
-            AN(1) <= '1';
+--        elsif (s_dis = 2) then
+--        	DIS_2 <= number;
+--            AN(1) <= '1';
             
-        elsif (s_dis = 3) then
-        	DIS_3 <= number;
-            AN(2) <= '1';
+--        elsif (s_dis = 3) then
+----        	DIS_3 <= number;
+--            AN(2) <= '1';
             
-        elsif (s_dis = 4) then
-        	DIS_4 <= number;
-            AN(3) <= '1';
+--        elsif (s_dis = 4) then
+--        	DIS_4 <= number;
+--            AN(3) <= '1';
             
-        elsif (s_dis = 5) then
-        	DIS_5 <= number;
-            AN(4) <= '1';
+--        elsif (s_dis = 5) then
+--        	DIS_5 <= number;
+--            AN(4) <= '1';
             
-        end if;        
-    end process p_display;
-    
-	
+--        end if;        
+--    end process p_display;
+    DIS <= number;
     
 
 end Behavioral;

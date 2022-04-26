@@ -37,7 +37,7 @@ begin
   -- Instance (copy) of clock_enable entity
   clk_en0 : entity work.decoder
       generic map(
-          g_MAX => 25000000
+          g_MAX =>10 --25000000
       )
       port map(
           clk   => CLK100MHZ,
@@ -96,6 +96,6 @@ begin
       );
 
   -- Disconnect the top four digits of the 7-segment display
-  AN(7 downto 5) <= b"1111";
+  AN(7 downto 5) <= b"111";
   
 end architecture Behavioral;
