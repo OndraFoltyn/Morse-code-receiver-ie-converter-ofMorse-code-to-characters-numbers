@@ -174,8 +174,26 @@ begin
           shift_led(0) <= shift_led(3);
           
         elsif (rising_edge(inp_tran) or reset = '1') then
-        shift_led <= "000000000000000";
-        
+        --shift_led(14 downto 0) <= b"000000000000000";
+          shift_led(14) <= '0';
+          shift_led(13) <= '0';
+          shift_led(12) <= '0';
+          
+          shift_led(11) <= '0';
+          shift_led(10) <= '0';
+          shift_led(9) <= '0';
+          
+          shift_led(8) <= '0';
+          shift_led(7) <= '0';
+          shift_led(6) <= '0';
+          
+          shift_led(5) <= '0';
+          shift_led(4) <= '0';
+          shift_led(3) <= '0';
+          
+          shift_led(2) <= '0';
+          shift_led(1) <= '0';
+          shift_led(0) <= '0';
         end if;
     end process p_shift_led;
     
