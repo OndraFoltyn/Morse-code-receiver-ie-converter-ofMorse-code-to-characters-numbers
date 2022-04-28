@@ -23,7 +23,7 @@ end entity tb_decoder;
 -- Architecture body for testbench
 ------------------------------------------------------------
 architecture testbench of tb_decoder is 
-
+    constant g_MAX  : natural := 25000000;
 	constant t_MAX               : natural := 6;
     constant dis_MAX             : natural := 7;
     constant c_MAX               : natural := 10;
@@ -38,11 +38,7 @@ architecture testbench of tb_decoder is
     signal s_inp_mez 	: std_logic;
     signal s_inp_tran	: std_logic;
     signal s_LED		: STD_LOGIC_VECTOR(14 downto 0);
-    signal s_DIS_1		: STD_LOGIC_VECTOR(6 downto 0);
-    signal s_DIS_2		: STD_LOGIC_VECTOR(6 downto 0);
-    signal s_DIS_3		: STD_LOGIC_VECTOR(6 downto 0);
-    signal s_DIS_4		: STD_LOGIC_VECTOR(6 downto 0);
-    signal s_DIS_5		: STD_LOGIC_VECTOR(6 downto 0);
+    signal s_DIS		: STD_LOGIC_VECTOR(6 downto 0);
     
  
 begin
@@ -64,11 +60,7 @@ begin
             inp_mez   => s_inp_mez,
             inp_tran => s_inp_tran,            
             LED => s_LED,
-            DIS_1 => s_DIS_1,
-            DIS_2 => s_DIS_2,
-            DIS_3 => s_DIS_3,
-            DIS_4 => s_DIS_4,
-            DIS_5 => s_DIS_5
+            DIS => s_DIS
             
            
         );

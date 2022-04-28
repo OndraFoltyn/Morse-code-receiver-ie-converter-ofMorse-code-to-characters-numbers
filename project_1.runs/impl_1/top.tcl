@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Documents/xfolty18/project_1/project_1.runs/impl_1/top.tcl"
+  variable script "D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -131,13 +130,13 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Documents/xfolty18/project_1/project_1.cache/wt [current_project]
-  set_property parent.project_path D:/Documents/xfolty18/project_1/project_1.xpr [current_project]
-  set_property ip_output_repo D:/Documents/xfolty18/project_1/project_1.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.cache/wt [current_project]
+  set_property parent.project_path D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.xpr [current_project]
+  set_property ip_output_repo D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Documents/xfolty18/project_1/project_1.runs/synth_1/top.dcp
+  add_files -quiet D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.runs/synth_1/top.dcp
 OPTRACE "read constraints: implementation" START { }
   read_xdc D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc
 OPTRACE "read constraints: implementation" END { }

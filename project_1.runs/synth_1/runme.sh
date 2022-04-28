@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Documents/xfolty18/project_1/project_1.runs/synth_1'
+HD_PWD='D:/Documents/xfolty18/project_1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

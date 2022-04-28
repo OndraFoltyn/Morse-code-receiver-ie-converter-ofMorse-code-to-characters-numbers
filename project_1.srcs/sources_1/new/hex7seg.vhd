@@ -27,9 +27,9 @@ use ieee.std_logic_1164.all;
 ------------------------------------------------------------
 entity hex7seg is
     port(
-        hex_i : in  std_logic_vector(6 downto 0);
+        hex_i  : in  std_logic_vector(6 downto 0);
         seg2_o : out std_logic_vector(7 - 1 downto 0);
-        rst         : in std_logic;
+        rst    : in std_logic;
         char_i : in  std_logic_vector(2 downto 0);
         inp_tran : in std_logic;
         shift_reg_i : in std_logic_vector(4 downto 0)
@@ -41,7 +41,7 @@ end entity hex7seg;
 architecture Behavioral of hex7seg is
 begin
 
-    p_7seg_decoder : process(hex_i)
+    p_7seg_decoder : process(inp_tran)
    begin
         if rising_edge(inp_tran) then
            
@@ -56,7 +56,7 @@ begin
                         
                     when "010" => -- 2 char
                         case shift_reg_i is
-                            when "00001" => -- 
+                            when "10000" => -- 
                                 seg2_o <= "0001000";-- A .-
                             when others =>
                                 seg2_o <= "1111110"; -- -
@@ -66,7 +66,7 @@ begin
                         case shift_reg_i is
                             when "00100" =>
                                 seg2_o <= "1000010";-- d -..
-                            when "00001" =>
+                            when "10000" =>
                                 seg2_o <= "1000001";-- U ..-
                             when "00000" =>
                                 seg2_o <= "0100100";-- S ...
@@ -76,13 +76,13 @@ begin
                         
                     when "100" =>  -- 4 char
                         case shift_reg_i is
-                            when "01000" =>
+                            when "00010" =>
                                 seg2_o <= "1100000";-- b -...
                             when "01010" =>
                                 seg2_o <= "0110001";-- C -.-.
-                            when "00010" =>
+                            when "01000" =>
                                 seg2_o <= "0111000";-- F ..-.
-                            when "00110" =>
+                            when "01100" =>
                                 seg2_o <= "0011000";-- P .--.
                             when "00100" =>
                                 seg2_o <= "1110001";-- L .-..
@@ -96,23 +96,23 @@ begin
                           case shift_reg_i is
                             when "11111" =>
                                 seg2_o <= "0000001";-- 0 -----
-                            when "01111" =>
+                            when "11110" =>
                                 seg2_o <= "1001111";-- 1 .----
-                            when "00111" =>
+                            when "11100" =>
                                 seg2_o <= "0010010";-- 2 ..---
-                            when "00011" =>
+                            when "11000" =>
                                 seg2_o <= "0000110";-- 3 ...--
-                            when "00001" =>
+                            when "10000" =>
                                 seg2_o <= "1001100";-- 4 ....-
                             when "00000" =>
                                 seg2_o <= "0100100";-- 5 .....
-                            when "10000" =>
+                            when "00001" =>
                                 seg2_o <= "0100000";-- 6 -....
-                            when "11000" =>
+                            when "00011" =>
                                 seg2_o <= "0001111";-- 7 --...
-                            when "11100" =>
+                            when "00111" =>
                                 seg2_o <= "0000000";-- 8 ---..
-                            when "11110" =>
+                            when "01111" =>
                                 seg2_o <= "0000100";-- 9 ----.
                             when others =>
                                 seg2_o <= "1111110"; -- -
