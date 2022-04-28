@@ -2,9 +2,9 @@
 
 ### Team members
 
-* Drápal Jakub (responsible for )
-* Foltyn Ondřej (responsible for )
-* Fyman Mikuláš (responsible for )
+* Drápal Jakub (různé části kódu)
+* Foltyn Ondřej (různé části kódu)
+* Fyman Mikuláš (různé části kódu)
 
 
 ### Table of contents
