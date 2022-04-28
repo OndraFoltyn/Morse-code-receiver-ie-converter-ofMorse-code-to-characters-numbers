@@ -58,6 +58,13 @@ Výstupní kód z dekodéru se rozdělí podle počtu znaků a dále je přelož
 
 [Top module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/top.vhd)
 
+
+
+
+
+[Prototyp kódu na EDA Playground](https://www.edaplayground.com/x/WCaS)
+![Simulace](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/images/decoder.png)
+*Výsledná simulace prototypu*
 <a name="video"></a>
 
 ## Video
