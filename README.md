@@ -47,7 +47,7 @@ V clock-enable používáme lokální proměnnou s_cnt_local, která čítá ná
 
 
 ### Sedmisegmenotý displej
-Výstpuní kód z dekodéru se rozdělí podle počtu znaků a dále je přeložen a zobrazen na displeji.
+Výstupní kód z dekodéru se rozdělí podle počtu znaků a dále je přeložen a zobrazen na displeji.
 
 [7seg module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/hex7seg.vhd)
 <a name="top"></a>
