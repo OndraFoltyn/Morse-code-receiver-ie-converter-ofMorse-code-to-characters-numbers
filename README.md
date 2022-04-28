@@ -28,6 +28,8 @@ Našim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseo
 
 ## Hardware description
 
+Pro tento projekt byla použita deska **Nexys A7-50T**.
+Deska Nexys A7 je kompletní platforma pro vývoj digitálních obvodů připravená k použití, založená na nejnovějším Artix-7™ Field Programmable Gate Array (FPGA) od Xilinx®. Díky velkému, vysokokapacitnímu FPGA, velkorysým externím pamětem a sbírce USB, Ethernet a dalších portů může Nexys A7 hostit návrhy od úvodních kombinačních obvodů až po výkonné vestavěné procesory. Několik vestavěných periferních zařízení, včetně akcelerometru, teplotního senzoru, digitálního mikrofonu MEM, zesilovače reproduktorů a několika I/O zařízení, umožňuje použití Nexys A7 pro širokou škálu návrhů, aniž by potřeboval další komponenty.
 ![deska](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/images/NexysA7.jpg)
 
 <a name="modules"></a>
