@@ -28,7 +28,7 @@ Našim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseo
 
 ## Hardware description
 
-Write your text here.
+![deska](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/images/NexysA7.jpg)
 
 <a name="modules"></a>
 
