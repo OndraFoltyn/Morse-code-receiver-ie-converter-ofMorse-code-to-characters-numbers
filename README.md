@@ -55,10 +55,8 @@ Výstupní kód z dekodéru se rozdělí podle počtu znaků a dále je přelož
 <a name="top"></a>
 
 ## TOP module description and simulations
-
+V top modulu jsme propojili moduly mezi sebou a výstupy z modulů se sedmisegmentovým displejem, LED diodami a tlačítka se vstupy dekodéru. 
 [Top module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/top.vhd)
-
-
 
 
 
@@ -74,6 +72,6 @@ Write your text here
 <a name="references"></a>
 
 ## References
-
-1. Write your text here.
-
+- minulé cvika
+- [Github pana Frýzy](https://github.com/tomas-fryza/digital-electronics-1)
+- [Deska Nexys A7](https://digilent.com/reference/programmable-logic/nexys-a7/start)
