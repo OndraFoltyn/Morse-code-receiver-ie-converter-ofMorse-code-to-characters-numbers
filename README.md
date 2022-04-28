@@ -69,7 +69,9 @@ V top modulu jsme propojili moduly mezi sebou a výstupy z modulů se sedmisegme
 
 ## Video
  Na videu je vidět zadávání znaků a nasledné zobrazení pomocí LED. Bohužel, nám nefunguje překlad z morseovy abecedy do normální abecedy a zobrazení na displeji. 
+ 
 ![Odkaz na video](https://www.youtube.com/watch?v=4p4m_nwOK4c)
+
 <a name="references"></a>
 
 ## References
