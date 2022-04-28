@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_counter'
+ERROR: [VRFC 10-2987] 'counter' is not compiled in library 'xil_defaultlib' [D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd:42]
+ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd:25]
+INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd' ignored due to errors

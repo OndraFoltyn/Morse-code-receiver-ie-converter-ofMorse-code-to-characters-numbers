@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../project_morse.srcs/sources_1/new/decoder.vhd" \
-"../../../../project_morse.srcs/sim_1/new/tb_decoder.vhd" \
-
-# Do not sort compile order
-nosort
