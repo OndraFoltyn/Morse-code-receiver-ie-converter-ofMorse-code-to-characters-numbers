@@ -20,7 +20,7 @@
 
 ## Project objectives
 
-Našim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseova kódu, tento vstup přeložit do písmen a čísel a přeložený výstup zobrazit na sedmi-segmentovém displeji. 
+Našim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseova kódu, tento vstup přeložit do písmen a čísel a přeložený výstup zobrazit na sedmisegmentovém displeji. 
 
 <a name="hardware"></a>
 
@@ -35,7 +35,7 @@ Deska Nexys A7 je kompletní platforma pro vývoj digitálních obvodů připrav
 ## VHDL modules description and simulations
 
 ### Clock-enable 
-V clock-enable používáme lokální proměnnou s_cnt_local, která čítá náběžné hrany clocku. Při překročení nastavené úrovně sepne výstup ce_o. Používáme ho ke zpomalení signálu clock. 
+V clock-enable používáme lokální proměnnou s_cnt_local, která čítá náběžné hrany clocku. Při překročení nastavené úrovně sepne výstup ce_o. Používáme ho ke zpomalení signálu clock. Z něj vysíláme signál, pomocí kterého čítáme dobu po kterou je zmáčknuté tlačítko na zadávání. 
 
 [Clock-enable module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/clock_enable.vhd)
 
@@ -44,7 +44,9 @@ V clock-enable používáme lokální proměnnou s_cnt_local, která čítá ná
 *záznam původního průběhu clock-enable*
 
 ### Decoder
+V dekodéru jsme na vstup přivedli tlačítko na zadávání znaků, tlačitko pro mezeru mezi znaky a tlačítko pro překlad. Tlačítko pro zadávání znaků je připojeno k čítači, který čítá dobu zmáčknutí tlačítka, tuto dobu vyhodnotí a na základě podmínky určí znak (tečka nebo čárka). Tečka je definována jako nula, čárka jako jednička. Signál z čítače jde do Shift-registru, kde se zapisují hodnoty za sebe. Dále máme čítač znaků, které čítá pomocí náběžných hran tlačíka mezery. Signály z Shift-registru a čítače znaků posílá do sedmisegmentového displeje. 
 
+[Decoder module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/decoder.vhd)
 
 ### Sedmisegmenotý displej
 Výstupní kód z dekodéru se rozdělí podle počtu znaků a dále je přeložen a zobrazen na displeji.
@@ -54,7 +56,7 @@ Výstupní kód z dekodéru se rozdělí podle počtu znaků a dále je přelož
 
 ## TOP module description and simulations
 
-Write your text here.
+[Top module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/top.vhd)
 
 <a name="video"></a>
 
