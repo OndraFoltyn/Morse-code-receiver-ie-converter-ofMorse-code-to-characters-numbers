@@ -1,8 +1,8 @@
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Apr 28 17:51:07 2022
-| Host         : PC-632 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Thu Apr 28 20:24:16 2022
+| Host         : LAPTOP-2256P69N running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7a50ticsg324-1L
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 76
+             Violations found: 77
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 66         |
-| LUTAR-1   | Warning          | LUT drives async reset alert  | 3          |
+| LUTAR-1   | Warning          | LUT drives async reset alert  | 4          |
 | TIMING-18 | Warning          | Missing input or output delay | 4          |
 | TIMING-20 | Warning          | Non-clocked latch             | 3          |
 +-----------+------------------+-------------------------------+------------+
@@ -369,7 +369,7 @@ LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell decoder/LED[13]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) decoder/LED_reg[0]/CLR, decoder/LED_reg[10]/CLR, decoder/LED_reg[12]/CLR,
 decoder/LED_reg[13]/CLR, decoder/LED_reg[1]/CLR, decoder/LED_reg[3]/CLR,
-decoder/LED_reg[4]/CLR, decoder/LED_reg[6]/CLR, decoder/LED_reg[7]/CLR,
+decoder/LED_reg[4]/CLR, decoder/LED_reg[6]/CLR, decoder/LED_reg[7]/CLR
 decoder/LED_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
@@ -380,7 +380,12 @@ Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell decoder/s_led_reg[1]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) decoder/seg_o_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell decoder/s_led_reg[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) decoder/s_led_reg[1]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell decoder/s_led_reg[1]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) decoder/s_led_reg[1]/PRE, decoder/seg_o_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-18#1 Warning

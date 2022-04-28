@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.runs/impl_1/top.tcl"
+  variable script "C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -112,37 +112,36 @@ proc step_failed { step } {
   set endFile ".$step.error.rst"
   set ch [open $endFile w]
   close $ch
+OPTRACE "impl_1" END { }
 }
 
 
-OPTRACE "Implementation" START { ROLLUP_1 }
+OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
-  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 2
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a50ticsg324-1L
-  set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.cache/wt [current_project]
-  set_property parent.project_path D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.xpr [current_project]
-  set_property ip_output_repo D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.cache/wt} [current_project]
+  set_property parent.project_path {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.xpr} [current_project]
+  set_property ip_output_repo {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.runs/synth_1/top.dcp
+  add_files -quiet {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/synth_1/top.dcp}}
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc
+  read_xdc {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top top -part xc7a50ticsg324-1L
+  link_design -top top -part xc7a50ticsg324-1L 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -303,7 +302,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force top.mmi }
+  catch { write_mem_info -force -no_partial_mmi top.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
   write_bitstream -force top.bit 
@@ -325,4 +324,4 @@ if {$rc} {
 
 OPTRACE "write_bitstream misc" END { }
 OPTRACE "Phase: Write Bitstream" END { }
-OPTRACE "Implementation" END { }
+OPTRACE "impl_1" END { }

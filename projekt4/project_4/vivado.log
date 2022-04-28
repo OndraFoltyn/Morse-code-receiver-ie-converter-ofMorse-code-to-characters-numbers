@@ -1,122 +1,289 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Apr 28 18:04:25 2022
-# Process ID: 9192
-# Current directory: D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2396 D:\Documents\xfolty18\project\Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers\projekt4\project_4\project_4.xpr
-# Log file: D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/vivado.log
-# Journal file: D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4\vivado.jou
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Apr 28 20:08:31 2022
+# Process ID: 7608
+# Current directory: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19116 C:\Digital electronics 1\Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers\projekt4\project_4\project_4.xpr
+# Log file: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/vivado.log
+# Journal file: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4\vivado.jou
+# Running On: LAPTOP-2256P69N, OS: Windows, CPU Frequency: 2400 MHz, CPU Physical cores: 4, Host memory: 17054 MB
 #-----------------------------------------------------------
 start_gui
-open_project D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.xpr
+open_project {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.xpr}
 INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
-Current project path is 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4'
+Current project path is 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4'
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/clock_enable.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/decoder.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/hex7seg.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/top.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_clock_enable.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_decoder.vhd'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/APPZ/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:10 . Memory (MB): peak = 1384.887 ; gain = 0.000
 update_compile_order -fileset sources_1
-set_property top clock_enable [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property top clock_enable [current_fileset]
-update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'clock_enable' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj clock_enable_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-"xelab -wto 4d75c36a803a489bb22179b67ff98352 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clock_enable_behav xil_defaultlib.clock_enable -log elaborate.log"
-Vivado Simulator 2020.1
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 4d75c36a803a489bb22179b67ff98352 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot clock_enable_behav xil_defaultlib.clock_enable -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.clock_enable
-Built simulation snapshot clock_enable_behav
+update_compile_order -fileset sim_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+add_files -norecurse {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/top.vhd} {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/decoder.vhd} {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/clock_enable.vhd} {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/hex7seg.vhd}}
+add_files -fileset constrs_1 -norecurse {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc}}] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/top.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/top.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/hex7seg.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/hex7seg.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/decoder.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/decoder.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/clock_enable.vhd}}] -no_script -reset -force -quiet
+remove_files  {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/clock_enable.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_clock_enable.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_clock_enable.vhd}}
+export_ip_user_files -of_objects  [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_decoder.vhd}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_decoder.vhd}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Apr 28 20:12:44 2022] Launched synth_1...
+Run output will be captured here: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/synth_1/runme.log
+[Thu Apr 28 20:12:44 2022] Launched impl_1...
+Run output will be captured here: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1581.777 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2215.250 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2215.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2215.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
 
-****** Webtalk v2020.1 (64-bit)
-  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/clock_enable_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/clock_enable_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Apr 28 18:05:39 2022. For additional details about this file, please refer to the WebTalk help file at C:/APPZ/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Thu Apr 28 18:05:39 2022...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.828 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "clock_enable_behav -key {Behavioral:sim_1:Functional:clock_enable} -tclbatch {clock_enable.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.1
-Time resolution is 1 ps
-source clock_enable.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'clock_enable_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1024.828 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.828 ; gain = 0.000
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_clock_enable.vhd D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/tb_decoder.vhd}
-update_compile_order -fileset sim_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd
-update_compile_order -fileset sim_1
-set_property top tb_counter [get_filesets sim_1]
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2313.090 ; gain = 928.203
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+close_design
+set_property top top [current_fileset]
+set_property top top [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
-update_compile_order -fileset sim_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_counter' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_counter_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_counter'
-ERROR: [VRFC 10-2987] 'counter' is not compiled in library 'xil_defaultlib' [D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd:42]
-ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd:25]
-INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_hlavni.srcs/sim_1/new/enable_tb.vhd' ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-exit
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 28 18:31:25 2022...
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2374.234 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports CLK100MHZ]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CA'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CB'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CC'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CD'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CE'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CF'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CG'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNC'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNU'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2374.234 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2374.234 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2374.234 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 2374.234 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2374.234 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Thu Apr 28 20:20:44 2022] Launched synth_1...
+Run output will be captured here: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/synth_1/runme.log
+[Thu Apr 28 20:20:44 2022] Launched impl_1...
+Run output will be captured here: C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/impl_1/runme.log
+open_hw_manager
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2378.555 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2378.555 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 2378.555 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2378.555 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
+
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a50ticsg324-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2404.840 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc]
+Finished Parsing XDC File [C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2484.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
+

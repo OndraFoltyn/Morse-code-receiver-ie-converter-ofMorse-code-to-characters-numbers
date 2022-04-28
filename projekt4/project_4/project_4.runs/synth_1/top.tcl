@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.runs/synth_1/top.tcl"
+  variable script "C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,28 +70,26 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a50ticsg324-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.cache/wt [current_project]
-set_property parent.project_path D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.xpr [current_project]
+set_property webtalk.parent_dir {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.cache/wt} [current_project]
+set_property parent.project_path {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part digilentinc.com:nexys-a7-50t:part0:1.0 [current_project]
-set_property ip_output_repo d:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/dalsi_projekt/project/project.cache/ip [current_project]
+set_property ip_output_repo {c:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/clock_enable.vhd
-  D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/decoder.vhd
-  D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project_hlavni/project_hlavni.srcs/sources_1/new/hex7seg.vhd
-  D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/sources_1/new/top.vhd
+  {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/top.vhd}
+  {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/decoder.vhd}
+  {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/clock_enable.vhd}
+  {C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/sources_1/new/hex7seg.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -102,8 +100,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc
-set_property used_in_implementation false [get_files D:/Documents/xfolty18/project/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/project/project_morse/project_morse.srcs/constrs_1/new/nexys.xdc]
+read_xdc {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc}}
+set_property used_in_implementation false [get_files {{C:/Digital electronics 1/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/projekt4/project_4/project_4.srcs/constrs_1/new/nexys.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
@@ -111,6 +109,9 @@ close [open __synthesis_is_running__ w]
 OPTRACE "synth_design" START { }
 synth_design -top top -part xc7a50ticsg324-1L
 OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
 OPTRACE "write_checkpoint" START { CHECKPOINT }
