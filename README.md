@@ -43,6 +43,7 @@ V clock-enable používáme lokální proměnnou s_cnt_local, která čítá ná
 ![tb_clock-enable](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/images/tb_clock_enable.png)
 *záznam původního průběhu clock-enable*
 ### Sedmisegmenotý displej
+
 [7seg module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/hex7seg.vhd)
 
 ### Decoder
