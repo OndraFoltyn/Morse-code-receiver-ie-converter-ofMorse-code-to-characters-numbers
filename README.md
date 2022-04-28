@@ -20,7 +20,7 @@
 
 ## Project objectives
 
-Nšim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseova kódu, tento vstup přeložit do písmen a čísel a přeložený výstup zobrazit na sedmi-segmentovém displeji. 
+Našim úkolem bylo přeložit vstup zadaný pomocí tlačítek v podobě Morseova kódu, tento vstup přeložit do písmen a čísel a přeložený výstup zobrazit na sedmi-segmentovém displeji. 
 
 
 
