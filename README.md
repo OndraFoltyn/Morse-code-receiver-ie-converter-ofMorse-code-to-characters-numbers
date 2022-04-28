@@ -73,7 +73,7 @@ V top modulu jsme propojili moduly mezi sebou a výstupy z modulů se sedmisegme
 ![Odkaz na video](https://www.youtube.com/watch?v=4p4m_nwOK4c)
 
 <a name="references"></a>
-
+ 
 ## References
 - minulé cvika
 - [Github pana Frýzy](https://github.com/tomas-fryza/digital-electronics-1)
