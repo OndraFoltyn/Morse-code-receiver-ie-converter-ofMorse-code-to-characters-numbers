@@ -37,7 +37,7 @@ Deska Nexys A7 je kompletní platforma pro vývoj digitálních obvodů připrav
 ### Clock-enable 
 V clock-enable používáme lokální proměnnou s_cnt_local, která čítá náběžné hrany clocku. Při překročení nastavené úrovně sepne výstup ce_o. Používáme ho ke zpomalení signálu clock. 
 
-[clock](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/clock_enable.vhd)
+[Clock module](https://github.com/OndraFoltyn/Morse-code-receiver-ie-converter-ofMorse-code-to-characters-numbers/blob/main/projekt4/project_4/project_hlavni.srcs/sources_1/new/clock_enable.vhd)
 ### Sedmisegmenotý displej
 
 
